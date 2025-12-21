@@ -1,0 +1,55 @@
+{
+    "$schema": "./@types/schema/package/index.json",
+    "package_version": 2,
+    "name": "cocos-svg-series",
+    "version": "1.0.0",
+    "author": "Cinast",
+    "editor": ">=3.8.7",
+    "scripts": {
+        "preinstall": "node ./scripts/preinstall.js",
+        "build": "tsc",
+        "watch": "tsc -w"
+    },
+    "description": "i18n:cocos-svg-series.description",
+    "main": "./dist/main.js",
+    "panels": {
+        "svg-panel": {
+            "title": "SVG Series",
+            "main": "./dist/panel/index.js",
+            "type": "dockable",
+            "size": {
+                "width": 400,
+                "height": 600
+            }
+        }
+    },
+    "contributions": {
+        "menu": [
+            {
+                "path": "i18n:menu.extensions.svg_series",
+                "label": "SVG Tools",
+                "message": "open-svg-panel"
+            }
+        ],
+        "scene": {
+            "script": [
+                "./dist/SVGSprite",
+                "./dist/SVGOptimizer",
+                "./dist/SVGSpriteAnimation",
+                "./dist/SVGAtlasBuilder",
+                "./dist/SVGBatchRenderer",
+                "./dist/SVGLODManager",
+                "./dist/SVGSpriteCache"
+            ]
+        }
+    },
+    "devDependencies": {
+        "@cocos/creator-types": "^3.8.7",
+        "@types/node": "^18.17.1"
+    },
+    "dependencies": {
+        "flubber": "^0.4.2",
+        "svg.js": "^2.7.1",
+        "typescript": "^5.9.3"
+    }
+}
