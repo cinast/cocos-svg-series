@@ -26,30 +26,63 @@
     "contributions": {
         "menu": [
             {
-                "path": "i18n:menu.extensions.svg_series",
-                "label": "SVG Tools",
-                "message": "open-svg-panel"
+                "path": "i18n:cocos-svg-series",
+                "label": "i18n:cocos-svg-series.test",
+                "message": "test"
+            },
+            {
+                "path": "i18n:cocos-svg-series",
+                "label": "i18n:cocos-svg-series.import-svg",
+                "message": "import-svg"
+            },
+            {
+                "path": "i18n:cocos-svg-series",
+                "label": "i18n:cocos-svg-series.render-svg-preview",
+                "message": "render-svg-preview"
             }
         ],
+        "messages": {
+            "test": {
+                "methods": [
+                    "showLog"
+                ]
+            },
+            "import-svg": {
+                "methods": [
+                    "importSVG"
+                ]
+            },
+            "render-svg-preview": {
+                "methods": [
+                    "renderSVGPreview"
+                ]
+            }
+        },
+        "asset-db": {
+            "mount": {
+                "path": "./assets",
+                "readonly": true,
+                "visible": true
+            }
+        },
+        "inspector": {
+            "section": {
+                "asset": {
+                    "svg-asset": "./dist/contributions/inspector/svg-asset.js"
+                }
+            }
+        },
         "scene": {
-            "script": [
-                "./dist/SVGSprite",
-                "./dist/SVGOptimizer",
-                "./dist/SVGSpriteAnimation",
-                "./dist/SVGAtlasBuilder",
-                "./dist/SVGBatchRenderer",
-                "./dist/SVGLODManager",
-                "./dist/SVGSpriteCache"
-            ]
+            "script": "./dist/scene.js"
         }
     },
     "devDependencies": {
         "@cocos/creator-types": "^3.8.7",
-        "@types/node": "^18.17.1"
+        "@types/node": "^18.17.1",
+        "typescript": "^5.9.3"
     },
     "dependencies": {
         "flubber": "^0.4.2",
-        "svg.js": "^2.7.1",
-        "typescript": "^5.9.3"
+        "svg.js": "^2.7.1"
     }
 }
