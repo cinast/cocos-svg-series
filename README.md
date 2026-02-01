@@ -1,4 +1,6 @@
-# SVG 组件库 - 丰富 assets/component 内容
+# 已弃 desperated
+
+~~# SVG 组件库 - 丰富 assets/component 内容~~
 
 本项目为 Cocos Creator 3.8.7 游戏引擎扩展了强大的 SVG 处理组件库，提供了完整的 SVG 渲染、优化和性能管理解决方案。
 
